@@ -86,4 +86,4 @@ const makeCommits = (n) => {
 };
 
 // Memulai pembuatan commit sebanyak n
-makeCommits(10);  // Ubah angka ini untuk menentukan jumlah commit
+makeCommits(30);  // Ubah angka ini untuk menentukan jumlah commit

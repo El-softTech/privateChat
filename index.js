@@ -6,15 +6,14 @@ import random from "random";
 const path = "./data.json";
 const git = simpleGit();
 
-
 // Fungsi untuk membuat commit dengan tanggal yang disesuaikan
 const markCommit = (x, y) => {
   const date = moment()
     .subtract(1, "y")  // Mengurangi 1 tahun
-    .add(1, "d")      // Menambahkan 1 hari
-    .add(x, "w")      // Menambahkan x minggu
-    .add(y, "d")      // Menambahkan y hari
-    .format();        // Mengonversi menjadi format yang sesuai
+    .add(1, "d")       // Menambahkan 1 hari
+    .add(x, "w")       // Menambahkan x minggu
+    .add(y, "d")       // Menambahkan y hari
+    .format();         // Mengonversi menjadi format yang sesuai
 
   const data = { date: date };
 
@@ -64,7 +63,7 @@ const makeCommits = (n) => {
     .add(y, "d")
     .format();  // Format tanggal yang sesuai
 
-  const data = { date: date };
+  const data = { date: date, random: random.int(0, 1000000) }; // Tambahkan nilai acak agar file berubah setiap kali
   console.log(date);  // Menampilkan tanggal commit yang dibuat
 
   // Menulis data ke file
